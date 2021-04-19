@@ -10,4 +10,5 @@ Install pydot and graphviz and just run main.py
 
 The solution is generated in console as well as the tree is generated and saved in an output file solution.png using pydot and graphviz.
 
-![solution](https://user-images.githubusercontent.com/33949575/115283910-be3a5a80-a16b-11eb-8664-9dc5f2a1c2f7.png)
+![solution](https://user-images.githubusercontent.com/33949575/115289186-065c7b80-a172-11eb-9ca0-3e1ca4454227.png)
+
