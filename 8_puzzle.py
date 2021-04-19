@@ -165,10 +165,10 @@ class Main(object):
 		return "No SOLUTION" 
 	def LegendGenerate(self):
 
-		node=pydot.Node("State Space Tree of 8 Puzzle Problem in DEPTH WISE SEARCH", shape='none', fillcolor='yellow', fontsize='20')
+		node=pydot.Node("                                                      State Space Tree of 8 Puzzle Problem in DEPTH WISE SEARCH", shape='none', fillcolor='yellow', fontsize='20')
 		self.G.add_node(node)
 
-		node1=pydot.Node("LEGEND", shape='none', fillcolor='yellow', fontsize='20')
+		node1=pydot.Node("                                                                    LEGEND", shape='none', fillcolor='yellow', fontsize='20')
 		self.G.add_node(node1)
 
 		Assignmentnode= pydot.Node("Arjun Bhandari (08) \n CE 4th Year",fontsize="30", fontcolor="black",  shape="none")
