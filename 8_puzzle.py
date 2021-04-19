@@ -103,7 +103,7 @@ class Main(object):
 		states=[2,8,3,1,6,4,7,0,5]
 		self.InitialState = State(states, None, 0, None)
 		ChildrenStates = list()
-		self.G = pydot.Dot(graph_type="digraph")
+		self.G = pydot.Dot(graph_type="digraph",label="\n8 Puzzle Problem State Space Tree (""DFS) \n Arjun Bhandari (08) \n ""CE 4th Year",fontsize="30", color="red",fontcolor="black", style="filled", fillcolor="black")
 		node = pydot.Node(self.InitialState.pattern_state(),style = 'filled', fillcolor='green')
 		self.G.add_node(node)
 
@@ -163,19 +163,11 @@ class Main(object):
 				VisitedState[j].current_state()
 
 		return "No SOLUTION" 
+
 	def LegendGenerate(self):
-
-		node=pydot.Node("                                                      State Space Tree of 8 Puzzle Problem in DEPTH WISE SEARCH", shape='none', fillcolor='yellow', fontsize='20')
-		self.G.add_node(node)
-
-		node1=pydot.Node("                                                                    LEGEND", shape='none', fillcolor='yellow', fontsize='20')
+		
+		node1=pydot.Node("LEGEND", shape='none', fillcolor='yellow', fontsize='20')
 		self.G.add_node(node1)
-
-		Assignmentnode= pydot.Node("Arjun Bhandari (08) \n CE 4th Year",fontsize="30", fontcolor="black",  shape="none")
-		self.G.add_node(Assignmentnode)
-
-		edge=pydot.Edge(node,node1,style='invis')
-		self.G.add_edge(edge)
 
 		nodestart=pydot.Node("     ", shape='none', fillcolor='yellow', fontsize='20')
 		self.G.add_node(nodestart)
@@ -184,9 +176,7 @@ class Main(object):
 
 		patternode=pydot.Node("SOLUTION PATTERN = (Left, Right, Up, Down)", shape='none',fontsize='20')
 		self.G.add_node(patternode)
-		self.G.add_edge(pydot.Edge(InitialStateNode,patternode,style='invis'))
-		self.G.add_edge(pydot.Edge(patternode,Assignmentnode,style='invis'))
-		
+		self.G.add_edge(pydot.Edge(node1,InitialStateNode,style='invis'))
 
 		edge=pydot.Edge(nodestart,InitialStateNode,style='invis')
 		self.G.add_edge(edge)
@@ -194,8 +184,8 @@ class Main(object):
 		GoalStateNode=pydot.Node("Goal State",style='filled', fillcolor='Pink')
 		self.G.add_node(GoalStateNode)
 		edge=pydot.Edge(nodestart,GoalStateNode,style='invis')
+		self.G.add_edge(pydot.Edge(GoalStateNode,patternode,style='invis'))
 		self.G.add_edge(edge)
-
 
 		ExploringNode=pydot.Node("Exploring Node",style='filled', fillcolor='green')
 		self.G.add_node(ExploringNode)
