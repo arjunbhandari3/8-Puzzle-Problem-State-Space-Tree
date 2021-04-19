@@ -171,7 +171,7 @@ class Main(object):
 		node1=pydot.Node("LEGEND", shape='none', fillcolor='yellow', fontsize='20')
 		self.G.add_node(node1)
 
-		Assignmentnode= pydot.Node("Arjun Bhandari \n CE 4th Year \n Roll: 08",fontsize="30", fontcolor="black",  shape="none")
+		Assignmentnode= pydot.Node("Arjun Bhandari (08) \n CE 4th Year",fontsize="30", fontcolor="black",  shape="none")
 		self.G.add_node(Assignmentnode)
 
 		edge=pydot.Edge(node,node1,style='invis')
