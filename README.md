@@ -6,7 +6,7 @@ The state space tree for the solution of 8 puzzle problem using DFS.
 
 Install pydot and graphviz and just run main.py
 
-### Generated using pydot and grapviz
+### Generated using pydot and graphviz
 
 The solution is generated in console as well as the tree is generated and saved in an output file solution.png using pydot and graphviz.
 
